@@ -1874,18 +1874,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  /* DEMO FORMS */
+  /* NETLIFY FORMS */
 
   document
     .querySelectorAll(
-      ".js-demo-form"
+      ".js-netlify-form"
     )
     .forEach(
       (form) => {
 
         form.addEventListener(
           "submit",
-          (event) => {
+          async (event) => {
 
             event.preventDefault();
 
@@ -1930,52 +1930,111 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
-            const message =
-              form.dataset.success ||
-              "Η ενέργεια ολοκληρώθηκε.";
+            const submitButton =
+              form.querySelector(
+                'button[type="submit"]'
+              );
 
 
-            showToast(
-              message
-            );
-
-
-            form.reset();
-
-
-            if (
-              form._contactMode
-            ) {
-
-              form._contactMode.preference.value =
-                "phone";
-
-              form._contactMode.applyPreference();
-
+            if (submitButton) {
+              submitButton.disabled = true;
             }
 
 
-            if (
-              form === serviceForm
-            ) {
+            try {
 
-              setTimeout(
-                closeServiceDrawer,
-                550
+              const formData =
+                new FormData(form);
+
+
+              const response =
+                await fetch(
+                  "/",
+                  {
+                    method: "POST",
+                    headers: {
+                      "Content-Type":
+                        "application/x-www-form-urlencoded"
+                    },
+                    body:
+                      new URLSearchParams(
+                        formData
+                      ).toString()
+                  }
+                );
+
+
+              if (!response.ok) {
+                throw new Error(
+                  "Form submission failed"
+                );
+              }
+
+
+              const message =
+                form.dataset.success ||
+                "Η αποστολή ολοκληρώθηκε.";
+
+
+              showToast(
+                message
+              );
+
+
+              form.reset();
+
+
+              if (
+                form._contactMode
+              ) {
+
+                form._contactMode.preference.value =
+                  "phone";
+
+                form._contactMode.applyPreference();
+
+              }
+
+
+              if (
+                form === serviceForm
+              ) {
+
+                setTimeout(
+                  closeServiceDrawer,
+                  550
+                );
+
+              }
+
+
+              if (
+                knowledgeDrawer &&
+                knowledgeDrawer.contains(form)
+              ) {
+
+                setTimeout(
+                  closeKnowledgeDrawer,
+                  550
+                );
+
+              }
+
+            }
+
+            catch (error) {
+
+              showToast(
+                "Η αποστολή δεν ολοκληρώθηκε. Δοκίμασε ξανά σε λίγο."
               );
 
             }
 
+            finally {
 
-            if (
-              knowledgeDrawer &&
-              knowledgeDrawer.contains(form)
-            ) {
-
-              setTimeout(
-                closeKnowledgeDrawer,
-                550
-              );
+              if (submitButton) {
+                submitButton.disabled = false;
+              }
 
             }
 
