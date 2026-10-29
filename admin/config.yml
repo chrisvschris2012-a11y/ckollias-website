@@ -1,0 +1,82 @@
+backend:
+  name: turbo-github
+  turbo_site_id: "PASTE_TURBO_SITE_ID_HERE"
+  branch: main
+
+site_url: "https://www.ckollias.gr"
+display_url: "https://www.ckollias.gr"
+
+collections:
+  - name: "knowledge"
+    label: "Γνώση"
+
+    files:
+      - label: "Βίντεο Γνώσης"
+        name: "videos"
+        file: "data/knowledge.json"
+
+        fields:
+          - label: "Βίντεο"
+            name: "videos"
+            widget: "list"
+            label_singular: "Νέο βίντεο"
+            add_to_top: true
+            collapsed: true
+            summary: "{{fields.title}}"
+
+            fields:
+              - label: "Τίτλος"
+                name: "title"
+                widget: "string"
+
+              - label: "Κατηγορία"
+                name: "category"
+                widget: "select"
+                options:
+                  - label: "Υγεία"
+                    value: "health"
+
+                  - label: "Περιουσία"
+                    value: "property"
+
+                  - label: "Επιχείρηση"
+                    value: "business"
+
+                  - label: "Αυτοκίνητο"
+                    value: "car"
+
+                  - label: "Βασικές έννοιες"
+                    value: "basics"
+
+              - label: "Διάρκεια"
+                name: "duration"
+                widget: "string"
+                required: false
+                hint: "Παράδειγμα: 3 min"
+
+              - label: "Σύντομη περιγραφή κάρτας"
+                name: "description"
+                widget: "text"
+
+              - label: "Εξήγηση"
+                name: "summary"
+                widget: "text"
+                hint: "Το κείμενο που εμφανίζεται όταν ανοίγει το βίντεο."
+
+              - label: "YouTube link"
+                name: "youtube_url"
+                widget: "string"
+                required: false
+                hint: "Επικόλλησε το κανονικό link του YouTube ή του youtu.be."
+
+              - label: "Featured"
+                name: "featured"
+                widget: "boolean"
+                default: false
+                hint: "Το πρώτο δημοσιευμένο βίντεο με Featured ενεργό εμφανίζεται μεγάλο στην κορυφή."
+
+              - label: "Δημοσιευμένο"
+                name: "published"
+                widget: "boolean"
+                default: true
+                hint: "Απενεργοποίησέ το για να κρυφτεί από το site χωρίς να διαγραφεί."
