@@ -269,9 +269,21 @@
 
 
         <form
-          class="newsletter-form js-demo-form reveal"
-          data-success="Η εγγραφή σου καταχωρήθηκε στο demo."
+          name="knowledge-newsletter"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          class="newsletter-form js-netlify-form reveal"
+          data-success="Η εγγραφή σου στάλθηκε με επιτυχία."
         >
+
+          <input type="hidden" name="form-name" value="knowledge-newsletter">
+          <p hidden>
+            <label>
+              Μην συμπληρώσεις αυτό το πεδίο:
+              <input name="bot-field">
+            </label>
+          </p>
 
           <div class="form-group">
 
@@ -333,7 +345,7 @@
           </div>
 
           <small>
-            Η φόρμα λειτουργεί προς το παρόν ως demo.
+            Τα στοιχεία χρησιμοποιούνται για την επικοινωνία σχετικά με το αίτημά σου.
           </small>
 
         </form>
@@ -520,9 +532,21 @@
 
 
         <form
-          class="js-demo-form"
-          data-success="Το ενδιαφέρον σου καταχωρήθηκε στο demo."
+          name="knowledge-contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          class="js-netlify-form"
+          data-success="Ευχαριστώ. Τα στοιχεία σου στάλθηκαν με επιτυχία."
         >
+
+          <input type="hidden" name="form-name" value="knowledge-contact">
+          <p hidden>
+            <label>
+              Μην συμπληρώσεις αυτό το πεδίο:
+              <input name="bot-field">
+            </label>
+          </p>
 
           <div class="form-group">
 
@@ -585,7 +609,7 @@
           </button>
 
           <small class="form-note">
-            Η φόρμα λειτουργεί προς το παρόν ως demo.
+            Τα στοιχεία χρησιμοποιούνται για την επικοινωνία σχετικά με το αίτημά σου.
           </small>
 
         </form>
