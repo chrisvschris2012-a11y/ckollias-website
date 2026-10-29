@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Γνώση | Χρήστος Κόλλιας</title>
+
+  <meta
+    name="description"
+    content="Απλές και κατανοητές εξηγήσεις για ασφάλιση, καλύψεις και οικονομικό σχεδιασμό."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="knowledge">
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a
+        href="index.html"
+        class="brand"
+        aria-label="Αρχική"
+      >
+
+        <img
+          src="assets/images/logo.png"
+          alt="Χρήστος Κόλλιας"
+          class="brand-logo"
+        >
+
+      </a>
+
+
+      <nav
+        class="main-nav"
+        id="mainNav"
+      >
+
+        <a href="index.html#about">
+          Ποιος είμαι
+        </a>
+
+        <a href="index.html#approach">
+          Προσέγγιση
+        </a>
+
+        <a href="index.html#areas">
+          Πού μπορώ να βοηθήσω
+        </a>
+
+        <a
+          href="knowledge.html"
+          class="active-nav"
+        >
+          Γνώση
+        </a>
+
+        <a href="career.html">
+          Καριέρα
+        </a>
+
+        <a
+          href="index.html#contact"
+          class="nav-cta"
+        >
+          Επικοινωνία
+        </a>
+
+      </nav>
+
+
+      <div class="header-actions">
+
+        <a
+          href="tel:+306945514720"
+          class="header-phone"
+        >
+          694 551 4720
+        </a>
+
+        <button
+          class="mobile-menu-button"
+          id="mobileMenuButton"
+          type="button"
+          aria-label="Άνοιγμα μενού"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <section class="knowledge-hero">
+
+      <div class="knowledge-orbit knowledge-orbit-one"></div>
+      <div class="knowledge-orbit knowledge-orbit-two"></div>
+
+      <div class="container knowledge-hero-grid">
+
+        <div class="reveal">
+
+          <span class="section-label">
+            Knowledge Library
+          </span>
+
+          <h1>
+            Να καταλαβαίνεις
+            πριν αποφασίσεις.
+          </h1>
+
+        </div>
+
+
+        <div class="knowledge-hero-copy reveal">
+
+          <p>
+            Όροι, καλύψεις και έννοιες εξηγημένες απλά,
+            ώστε να ξέρεις τι σημαίνουν πριν χρειαστεί
+            να αποφασίσεις.
+          </p>
+
+          <span>
+            Οι όροι εξηγούνται γενικά.
+            Οι αποφάσεις παίρνονται προσωπικά.
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="featured-knowledge">
+
+      <div
+        class="container"
+        id="featuredKnowledgeContainer"
+      >
+      </div>
+
+    </section>
+
+
+    <section class="knowledge-library">
+
+      <div class="container">
+
+        <div class="library-header reveal">
+
+          <div>
+
+            <span class="section-label">
+              Library
+            </span>
+
+            <h2>
+              Βρες αυτό που θέλεις
+              <em>να καταλάβεις.</em>
+            </h2>
+
+          </div>
+
+
+          <div class="knowledge-filters">
+
+            <button
+              class="filter-button active"
+              type="button"
+              data-filter="all"
+            >
+              Όλα
+            </button>
+
+            <button
+              class="filter-button"
+              type="button"
+              data-filter="health"
+            >
+              Υγεία
+            </button>
+
+            <button
+              class="filter-button"
+              type="button"
+              data-filter="property"
+            >
+              Περιουσία
+            </button>
+
+            <button
+              class="filter-button"
+              type="button"
+              data-filter="business"
+            >
+              Επιχείρηση
+            </button>
+
+            <button
+              class="filter-button"
+              type="button"
+              data-filter="car"
+            >
+              Αυτοκίνητο
+            </button>
+
+            <button
+              class="filter-button"
+              type="button"
+              data-filter="basics"
+            >
+              Βασικές έννοιες
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="knowledge-grid"
+          id="knowledgeGrid"
+        >
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="newsletter-section">
+
+      <div class="container newsletter-grid">
+
+        <div class="newsletter-copy reveal">
+
+          <span class="section-label">
+            Newsletter
+          </span>
+
+          <h2>
+            Από τη βιβλιοθήκη
+            <em>στο inbox σου.</em>
+          </h2>
+
+          <p>
+            Σύντομες εξηγήσεις, χρήσιμες ιδέες και νέο περιεχόμενο,
+            όταν υπάρχει πραγματικά κάτι που αξίζει να διαβάσεις.
+          </p>
+
+        </div>
+
+
+        <form
+          class="newsletter-form js-demo-form reveal"
+          data-success="Η εγγραφή σου καταχωρήθηκε στο demo."
+        >
+
+          <div class="form-group">
+
+            <label for="newsletterName">
+              Όνομα
+            </label>
+
+            <input
+              type="text"
+              id="newsletterName"
+              name="name"
+              placeholder="Το όνομά σου"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="newsletterAge">
+              Ηλικία
+            </label>
+
+            <input
+              type="number"
+              id="newsletterAge"
+              name="age"
+              min="0"
+              max="120"
+              placeholder="Προαιρετικά"
+            >
+
+          </div>
+
+
+          <label for="newsletterEmail">
+            Email
+          </label>
+
+          <div class="newsletter-input-row">
+
+            <input
+              type="email"
+              id="newsletterEmail"
+              name="email"
+              placeholder="name@example.com"
+              required
+            >
+
+            <button
+              type="submit"
+              class="button button-primary"
+            >
+              Εγγραφή
+              <span>→</span>
+            </button>
+
+          </div>
+
+          <small>
+            Η φόρμα λειτουργεί προς το παρόν ως demo.
+          </small>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <section class="knowledge-disclaimer">
+
+      <div class="container">
+
+        <span>
+          Σημείωση
+        </span>
+
+        <p>
+          Το εκπαιδευτικό υλικό έχει γενικό ενημερωτικό χαρακτήρα.
+          Οι πραγματικές καλύψεις, εξαιρέσεις και όροι εξαρτώνται
+          από το συγκεκριμένο ασφαλιστήριο και την εκάστοτε εταιρεία.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="container footer-main">
+
+      <div>
+
+        <img
+          src="assets/images/logo.png"
+          alt="Χρήστος Κόλλιας"
+          class="footer-logo"
+        >
+
+        <p class="footer-tagline">
+          Personal Advisory
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="index.html#about">
+          Ποιος είμαι
+        </a>
+
+        <a href="index.html#approach">
+          Προσέγγιση
+        </a>
+
+        <a href="index.html#areas">
+          Πού μπορώ να βοηθήσω
+        </a>
+
+        <a href="knowledge.html">
+          Γνώση
+        </a>
+
+        <a href="career.html">
+          Καριέρα
+        </a>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <span>
+          Επικοινωνία
+        </span>
+
+        <a href="tel:+306945514720">
+          694 551 4720
+        </a>
+
+        <a href="mailto:connect@ckollias.gr">
+          connect@ckollias.gr
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <span>
+        © 2026 Χρήστος Κόλλιας
+      </span>
+
+      <span>
+        Insurance Advisor · Personal Advisory
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <div
+    class="drawer-backdrop"
+    id="knowledgeBackdrop"
+  ></div>
+
+
+  <aside
+    class="service-drawer"
+    id="knowledgeDrawer"
+    aria-hidden="true"
+  >
+
+    <button
+      class="drawer-close"
+      id="knowledgeClose"
+      type="button"
+      aria-label="Κλείσιμο"
+    >
+      ×
+    </button>
+
+
+    <div class="drawer-content">
+
+      <span
+        class="section-label"
+        id="knowledgeDrawerMeta"
+      >
+        Knowledge
+      </span>
+
+      <h2 id="knowledgeDrawerTitle">
+        Τίτλος
+      </h2>
+
+
+      <div
+        class="drawer-video-placeholder"
+        id="knowledgeVideoArea"
+      >
+
+        <span class="video-orbit video-orbit-a"></span>
+        <span class="video-orbit video-orbit-b"></span>
+
+        <div class="video-placeholder-center">
+
+          <span>
+            Video placeholder
+          </span>
+
+          <strong>
+            Explanation
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="knowledge-summary">
+
+        <span>
+          Με απλά λόγια
+        </span>
+
+        <p id="knowledgeDrawerSummary"></p>
+
+      </div>
+
+
+      <div class="drawer-form-block">
+
+        <span class="drawer-question">
+          Θέλεις να το δούμε στη δική σου περίπτωση;
+        </span>
+
+
+        <form
+          class="js-demo-form"
+          data-success="Το ενδιαφέρον σου καταχωρήθηκε στο demo."
+        >
+
+          <div class="form-group">
+
+            <label for="knowledgeName">
+              Όνομα
+            </label>
+
+            <input
+              type="text"
+              id="knowledgeName"
+              name="name"
+              placeholder="Το όνομά σου"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="knowledgeAge">
+              Ηλικία
+            </label>
+
+            <input
+              type="number"
+              id="knowledgeAge"
+              name="age"
+              min="0"
+              max="120"
+              placeholder="Προαιρετικά"
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="knowledgePhone">
+              Τηλέφωνο
+            </label>
+
+            <input
+              type="tel"
+              id="knowledgePhone"
+              name="phone"
+              placeholder="69XXXXXXXX"
+              required
+            >
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="button button-primary full-button"
+          >
+            Ας μιλήσουμε
+            <span>→</span>
+          </button>
+
+          <small class="form-note">
+            Η φόρμα λειτουργεί προς το παρόν ως demo.
+          </small>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  >
+
+    <strong>
+      Έτοιμο.
+    </strong>
+
+    <span id="toastMessage">
+      Η ενέργεια ολοκληρώθηκε.
+    </span>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
