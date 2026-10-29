@@ -1,6 +1,6 @@
 backend:
   name: turbo-github
-  turbo_site_id: "PASTE_TURBO_SITE_ID_HERE"
+  turbo_site_id: "2481ed8b-ce74-45cb-8568-744581c1f666"
   branch: main
 
 site_url: "https://www.ckollias.gr"
