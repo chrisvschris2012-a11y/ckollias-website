@@ -290,6 +290,283 @@
 
 
         <form
+          name="knowledge-newsletter"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          class="newsletter-form js-netlify-form reveal"
+          data-success="Η εγγραφή σου στάλθηκε με επιτυχία."
+        >
+
+          <input type="hidden" name="form-name" value="knowledge-newsletter">
+          <p hidden>
+            <label>
+              Μην συμπληρώσεις αυτό το πεδίο:
+              <input name="bot-field">
+            </label>
+          </p>
+
+          <div class="form-group">
+
+            <label for="newsletterName">
+              Όνομα
+            </label>
+
+            <input
+              type="text"
+              id="newsletterName"
+              name="name"
+              placeholder="Το όνομά σου"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="newsletterAge">
+              Ηλικία
+            </label>
+
+            <input
+              type="number"
+              id="newsletterAge"
+              name="age"
+              min="0"
+              max="120"
+              placeholder="Προαιρετικά"
+            >
+
+          </div>
+
+
+          <label for="newsletterEmail">
+            Email
+          </label>
+
+          <div class="newsletter-input-row">
+
+            <input
+              type="email"
+              id="newsletterEmail"
+              name="email"
+              placeholder="name@example.com"
+              required
+            >
+
+            <button
+              type="submit"
+              class="button button-primary"
+            >
+              Εγγραφή
+              <span>→</span>
+            </button>
+
+          </div>
+
+          
+          <label class="privacy-consent">
+            <input
+              type="checkbox"
+              name="newsletter_consent"
+              value="yes"
+              required
+            >
+            <span>
+              Θέλω να λαμβάνω ενημερώσεις στο email μου και έχω διαβάσει την
+              <a href="privacy.html" target="_blank" rel="noopener">Πολιτική Απορρήτου</a>.
+            </span>
+          </label>
+
+          <small>
+            Μπορείς να ζητήσεις διακοπή των ενημερώσεων οποιαδήποτε στιγμή.
+          </small>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <section class="knowledge-disclaimer">
+
+      <div class="container">
+
+        <span>
+          Σημείωση
+        </span>
+
+        <p>
+          Το εκπαιδευτικό υλικό έχει γενικό ενημερωτικό χαρακτήρα.
+          Οι πραγματικές καλύψεις, εξαιρέσεις και όροι εξαρτώνται
+          από το συγκεκριμένο ασφαλιστήριο και την εκάστοτε εταιρεία.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="container footer-main">
+
+      <div>
+
+        <img
+          src="assets/images/logo.png"
+          alt="Χρήστος Κόλλιας"
+          class="footer-logo"
+        >
+
+        <p class="footer-tagline">
+          Personal Advisory
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="index.html#about">
+          Ποιος είμαι
+        </a>
+
+        <a href="index.html#approach">
+          Προσέγγιση
+        </a>
+
+        <a href="index.html#areas">
+          Πού μπορώ να βοηθήσω
+        </a>
+
+        <a href="knowledge.html">
+          Γνώση
+        </a>
+
+        <a href="career.html">
+          Καριέρα
+        </a>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <span>
+          Επικοινωνία
+        </span>
+
+        <a href="tel:+306945514720">
+          694 551 4720
+        </a>
+
+        <a href="mailto:connect@ckollias.gr">
+          connect@ckollias.gr
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <span>
+        © 2026 Χρήστος Κόλλιας
+      </span>
+
+      <span>
+        Insurance Advisor · Personal Advisory
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <div
+    class="drawer-backdrop"
+    id="knowledgeBackdrop"
+  ></div>
+
+
+  <aside
+    class="service-drawer"
+    id="knowledgeDrawer"
+    aria-hidden="true"
+  >
+
+    <button
+      class="drawer-close"
+      id="knowledgeClose"
+      type="button"
+      aria-label="Κλείσιμο"
+    >
+      ×
+    </button>
+
+
+    <div class="drawer-content">
+
+      <span
+        class="section-label"
+        id="knowledgeDrawerMeta"
+      >
+        Knowledge
+      </span>
+
+      <h2 id="knowledgeDrawerTitle">
+        Τίτλος
+      </h2>
+
+
+      <div
+        class="drawer-video-placeholder"
+        id="knowledgeVideoArea"
+      >
+
+        <span class="video-orbit video-orbit-a"></span>
+        <span class="video-orbit video-orbit-b"></span>
+
+        <div class="video-placeholder-center">
+
+          <span>
+            Video placeholder
+          </span>
+
+          <strong>
+            Explanation
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="knowledge-summary">
+
+        <span>
+          Με απλά λόγια
+        </span>
+
+        <p id="knowledgeDrawerSummary"></p>
+
+      </div>
+
+
+      <div class="drawer-form-block">
+
+        <span class="drawer-question">
+          Θέλεις να το δούμε στη δική σου περίπτωση;
+        </span>
+
+
+        <form
           name="knowledge-contact"
           method="POST"
           data-netlify="true"
@@ -299,7 +576,6 @@
         >
 
           <input type="hidden" name="form-name" value="knowledge-contact">
-
           <p hidden>
             <label>
               Μην συμπληρώσεις αυτό το πεδίο:
@@ -308,6 +584,7 @@
           </p>
 
           <div class="form-group">
+
             <label for="knowledgeName">
               Όνομα
             </label>
@@ -319,9 +596,12 @@
               placeholder="Το όνομά σου"
               required
             >
+
           </div>
 
+
           <div class="form-group">
+
             <label for="knowledgeAge">
               Ηλικία
             </label>
@@ -334,9 +614,12 @@
               max="120"
               placeholder="Προαιρετικά"
             >
+
           </div>
 
+
           <div class="form-group">
+
             <label for="knowledgePhone">
               Τηλέφωνο
             </label>
@@ -348,8 +631,19 @@
               placeholder="69XXXXXXXX"
               required
             >
+
           </div>
 
+
+          <button
+            type="submit"
+            class="button button-primary full-button"
+          >
+            Ας μιλήσουμε
+            <span>→</span>
+          </button>
+
+          
           <label class="privacy-consent">
             <input
               type="checkbox"
@@ -363,14 +657,6 @@
               και συμφωνώ να χρησιμοποιηθούν τα στοιχεία μου για την εξυπηρέτηση του αιτήματός μου.
             </span>
           </label>
-
-          <button
-            type="submit"
-            class="button button-primary full-button"
-          >
-            Ας μιλήσουμε
-            <span>→</span>
-          </button>
 
           <small class="form-note">
             Τα στοιχεία χρησιμοποιούνται μόνο για την επικοινωνία σχετικά με το αίτημά σου.
