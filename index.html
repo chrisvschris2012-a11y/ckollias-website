@@ -846,10 +846,22 @@
 
 
         <form
-          class="contact-form js-demo-form reveal"
-          data-success="Τα στοιχεία σου καταχωρήθηκαν στο demo."
+          name="homepage-contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          class="contact-form js-netlify-form reveal"
+          data-success="Ευχαριστώ. Τα στοιχεία σου στάλθηκαν με επιτυχία."
           data-contact-form
         >
+
+          <input type="hidden" name="form-name" value="homepage-contact">
+          <p hidden>
+            <label>
+              Μην συμπληρώσεις αυτό το πεδίο:
+              <input name="bot-field">
+            </label>
+          </p>
 
           <div class="form-group">
 
@@ -978,7 +990,7 @@
           </button>
 
           <small class="form-note">
-            Η φόρμα λειτουργεί προς το παρόν ως demo.
+            Θα επικοινωνήσω μαζί σου χρησιμοποιώντας τα στοιχεία που επέλεξες.
           </small>
 
         </form>
@@ -1131,11 +1143,23 @@
 
 
         <form
-          class="js-demo-form"
+          name="service-interest"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          class="js-netlify-form"
           id="serviceForm"
-          data-success="Το ενδιαφέρον σου καταχωρήθηκε στο demo."
+          data-success="Ευχαριστώ. Το αίτημά σου στάλθηκε με επιτυχία."
           data-contact-form
         >
+
+          <input type="hidden" name="form-name" value="service-interest">
+          <p hidden>
+            <label>
+              Μην συμπληρώσεις αυτό το πεδίο:
+              <input name="bot-field">
+            </label>
+          </p>
 
           <input
             type="hidden"
@@ -1271,7 +1295,7 @@
           </button>
 
           <small class="form-note">
-            Η φόρμα λειτουργεί προς το παρόν ως demo.
+            Θα επικοινωνήσω μαζί σου χρησιμοποιώντας τα στοιχεία που επέλεξες.
           </small>
 
         </form>
