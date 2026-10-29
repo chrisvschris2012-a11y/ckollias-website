@@ -6,6 +6,9 @@ backend:
 site_url: "https://www.ckollias.gr"
 display_url: "https://www.ckollias.gr"
 
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
 collections:
   - name: "knowledge"
     label: "Γνώση"
