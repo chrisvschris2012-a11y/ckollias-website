@@ -978,20 +978,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  function getYouTubeThumbnail(
-    url
-  ) {
+  function getYouTubeThumbnail() {
 
-    const id =
-      getYouTubeId(url);
-
-
-    if (!id) {
-      return "";
-    }
-
-
-    return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+    // Privacy-first: do not contact YouTube/Google just to render the library.
+    // The YouTube iframe is created only after the visitor explicitly opens a video.
+    return "";
 
   }
 
