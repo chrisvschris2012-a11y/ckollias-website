@@ -4771,3 +4771,16 @@ h2 em {
     padding: 26px 0;
   }
 }
+
+
+.sensitive-data-note {
+  display: block;
+  margin-top: 7px;
+  color: var(--gray-400);
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+.career-form .sensitive-data-note {
+  color: #667786;
+}
