@@ -1541,6 +1541,7 @@ document.addEventListener("DOMContentLoaded", () => {
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"
             style="
               position:absolute;
               inset:0;
