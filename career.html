@@ -356,10 +356,22 @@
         <div class="career-form-column">
 
           <form
-            class="career-form js-demo-form reveal"
+          name="career-interest"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+            class="career-form js-netlify-form reveal"
             id="careerForm"
-            data-success="Το ενδιαφέρον σου καταχωρήθηκε στο demo."
+            data-success="Ευχαριστώ. Το ενδιαφέρον σου στάλθηκε με επιτυχία."
           >
+
+          <input type="hidden" name="form-name" value="career-interest">
+          <p hidden>
+            <label>
+              Μην συμπληρώσεις αυτό το πεδίο:
+              <input name="bot-field">
+            </label>
+          </p>
 
             <div class="career-form-heading">
 
@@ -642,7 +654,7 @@
 
 
             <small class="career-privacy">
-              Η φόρμα λειτουργεί προς το παρόν ως demo.
+              Τα στοιχεία χρησιμοποιούνται για την πρώτη επικοινωνία σχετικά με την επαγγελματική ευκαιρία.
             </small>
 
           </form>
